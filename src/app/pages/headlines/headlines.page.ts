@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./headlines.page.scss'],
 })
 export class HeadlinesPage implements OnInit {
+  categories = ['Brasil', 'Business', 'Entertainment', 'Health',
+                'Science', 'Sports', 'Technology'];
 
   constructor() { }
 
