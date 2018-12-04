@@ -14,7 +14,17 @@ export class TopNewsPage implements OnInit {
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
+    this.getData();
+  }
+
+  getData() {
     this.news = this.newsService.getData('top-headlines?country=br');
   }
 
+  onRefresh(event) {
+    this.getData();
+    setTimeout(() => {
+      event.target.complete();
+    }, 2000);
+  }
 }
